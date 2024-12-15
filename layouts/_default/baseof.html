@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
+<head>
+  {{ partial "meta" . }}
+  {{ partial "head" . }}
+  {{ block "head" . }}
+  {{ end }}
+</head>
+<body dir='{{ .Site.Language.LanguageDirection | default "ltr" }}'>
+  <main class="font-nunito font-thin">
+    {{ block "main" . }}
+    {{ end }}
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>

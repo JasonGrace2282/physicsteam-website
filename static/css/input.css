@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#metric {
+    background-size: 100%;
+    background-image: linear-gradient(to top right, #3D348B, #1b98e0);
+}

@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+{{ partial "metric" }}
+{{ with .Site.Data.home }}
+  <div class="flex flex-col justify-center items-center py-5">
+    <h2 class="text-blue-500 text-4xl font-nunito font-thin">Welcome to TJ's Physics Team!</h2>
+    <h3 class="py-2 text-teal-400 text-xl font-light">{{ .subtitle }}</h3>
+    <p class="w-3/4">{{ .description }}</p>
+  </div>
+
+  <div class="flex justify-center items-center">
+    <hr class="border-t w-[80%] bg-lightgray">
+  </div>
+
+  {{ range .sections }}
+    <div class="flex flex-col justify-center items-center py-5">
+      <h2 class="text-blue-500 text-4xl font-nunito font-thin">{{ .description }}</h2>
+    </div>
+  {{ end }}
+
+{{ end }}
+
+{{ end }}

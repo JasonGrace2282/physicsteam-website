@@ -1,0 +1,44 @@
+subtitle: A Conducive Working Environment Like No Other
+description: >
+  We offer engaging lectures, collaborative problem solving sessions, and challenging problem sets.
+  Physics Team is geared towards all students who want to build upon their physics knowledge. We also
+  encourage these dedicated students to participate in competitions such as the National Physics Olympiad
+  and Physics Bowl. In fact, Physics Team has a proud history of producing more members of the US Physics
+  Team than any other high school in the nation. Join us every Friday A and B Block during 8th period!
+  Since we cater lectures to students' varying abilities, you can be sure to take away new insights every week. 
+
+sections:
+  teams:
+    description: We Teach Varying Levels
+    items:
+      - name: A Team
+        description: >
+          A Team is designed for post-AP Physics students who have already learned or know the traditional classical
+          mechanics that is taught here at TJ. The primary purpose of A Team is to rigorously train students for higher
+          level competitions such as the USAPhO semifinalist exam in the US Physics Olympiad. We offer lectures and
+          challenging problem sets on post-AP mechanics topics, as well as material not covered in AP Physics like
+          thermodynamics, special relativity, optics, waves, and electrodynamics. A fairly deep understanding of
+          multivariable calculus is recommended, but is not required as it will be taught on the go. 
+
+        pic: a-team.jpg
+
+      - name: B Team
+        description: >
+          B Team is designed for AP Physics students who are looking for help or a supplement to their AP Physics class.
+          For the first half of the year, we will have lectures and problem sets that focus on mechanics in accordance
+          with the AP Physics course. We will also spend some time going deeper than AP Physics in certain areas, and
+          prepare students for the mechanics-based F=ma Exam, which is the equivalent of the AMC 12 exam in the US
+          Physics Olympiad. For the second half of the year, we will cover electricity and magnetism and review for the
+          AP exam in May.
+
+        pic: b-team.jpg
+
+      - name: C Team
+        description: >
+          C Team is designed to foster physics interest in those who have little to no experience in physics. This team is
+          based more on understanding physics from an experimental point of view through demonstrations. C Team topics include
+          a brief introduction to topics covered in TJ Physics courses like Physics 1 and AP Physics, as well as additional
+          topics such as optics and thermodynamics. Knowledge of calculus is not required for this team. In addition, C Team
+          also works with our Outreach Committee to organize physics demonstrations at community events. 
+
+        pic: c-team.jpg
