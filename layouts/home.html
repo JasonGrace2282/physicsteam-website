@@ -19,21 +19,19 @@
 
 
 
-      {{ range $index, $item := .items }}
-        <div class="flex flex-wrap flex-col {{ if modBool $index 2 }} md:flex-row {{ else }} md:flex-row-reverse {{ end }} justify-center overflow-hidden py-20">
-
-          <div class="flex justify-center items-center md:max-w-[40%] w-full py-10 {{ if modBool $index 2 }} ml-[-4vh] {{ end }}">
-            <div class="w-full h-[40vh] overflow-hidden flex justify-center items-center relative">
-              <img src="img/home/{{ .pic }}" class="object-cover w-full h-full transition-transform duration-300 {{ if modBool $index 2 }} rotate-x-[10deg] rotate-y-[10deg] translate-x-[-4vh] {{ else }} rotate-x-[10deg] rotate-y-[-10deg] translate-x-[4vh] {{ end }}">
+        {{ range $index, $item := .items }}
+          <div class="flex flex-wrap mx-0 justify-evenly {{ if not (modBool $index 2) }} flex-row-reverse {{ end }} mx-40 py-10 first:pt-0">
+            <div class="mt-[3vh] mb-[8vh] h-[40vh] w-[40%] flex justify-center
+              {{ if modBool $index 2 }} rotate-1  {{ else }} -rotate-1 {{ end }} -translate-x-[4vh] shadow-lg">
+              <img src="img/home/{{ .pic }}" class="h-full w-full flex relative items-center justify-center overflow-hidden rounded-lg">
+            </div>
+            <div class="relative w-[40%] px-3.5">
+              <h3 class="text-3xl text-teal-500 text-center">{{ $item.name }}</h3>
+              <p class="text-md">{{ $item.description }}</p>
             </div>
           </div>
-
-          <div class="flex flex-col md:max-w-[30%] items-center text-center">
-            <h3 class="text-3xl text-teal-500">{{ $item.name }}</h3>
-            <p class="text-lg">{{ $item.description }}</p>
-          </div>
-        </div>
-      {{ end }}
+        {{ end }}
+      </div>
     {{ end }}
   {{ end }}
 {{ end }}

@@ -12,6 +12,6 @@ $(function() {
 
   // add active class to current page
   const a = $(`a[goto="${url}"]`);
-  a.addClass("text-teal-500").removeClass("text-white");
+  a.addClass("text-teal-400").removeClass("text-white");
   console.log(url);
 })
