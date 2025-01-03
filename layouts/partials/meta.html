@@ -7,4 +7,6 @@
 {{ else }}
   <title>{{ $.Site.Title }}</title>
 {{ end }}
-<base href="{{ $.Site.BaseURL }}">
+{{ if not hugo.IsProduction }}
+  <base href="{{ $.Site.BaseURL }}">
+{{ end }}
