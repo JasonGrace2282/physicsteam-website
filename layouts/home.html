@@ -9,15 +9,13 @@
       </div>
     </div>
 
-    <div class="flex justify-center items-center">
-      <hr class="border-t w-[80%] bg-lightgray">
-    </div>
-
     {{ range .sections }}
+      <div class="flex justify-center items-center">
+        <hr class="border-t w-[80%] bg-lightgray">
+      </div>
+
       <div class="flex flex-col justify-center items-center py-10">
         <h2 class="text-blue-500 text-2xl md:text-4xl font-nunito font-thin pb-5">{{ .description }}</h2>
-
-
 
         {{ range $index, $item := .items }}
           <div class="flex flex-wrap mx-0 justify-evenly {{ if not (modBool $index 2) }} flex-row-reverse {{ end }} mx-40 py-10 first:pt-0">
@@ -27,11 +25,37 @@
             </div>
             <div class="relative w-[40%] px-3.5">
               <h3 class="text-3xl text-teal-500 text-center">{{ $item.name }}</h3>
-              <p class="text-md">{{ $item.description }}</p>
+              <p class="text-md">{{ safe.HTML $item.description }}</p>
             </div>
           </div>
         {{ end }}
       </div>
     {{ end }}
+
+    <div class="flex justify-center items-center">
+      <hr class="border-t w-[80%] bg-lightgray">
+    </div>
+
+    <div class="flex flex-col justify-center items-center py-10">
+      <h2 class="text-blue-500 text-2xl md:text-4xl font-nunito font-thin">Meet the Team</h2>
+      <h3 class="py-2 text-teal-400 text-lg md:text-xl font-light">The People Making Physics Team Possible</h3>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        {{ $total := len .team }}
+        {{ $isSingleLastRow := eq (mod $total 3) 1 }}
+        {{ range $index, $member := .team }}
+          <div class="flex justify-left items-center scale-75
+            {{ if and $isSingleLastRow (eq $index (sub $total 1)) }} md:col-start-2 {{ end }}">
+            <img src="img/team/{{ .pic }}" class="h-[20vh] w-[20vh] rounded-full shadow-lg">
+            <div class="flex flex-col pl-5">
+              <h3 class="text-sm text-[#3D348B]">{{ .name }}</h3>
+              <h4 class="text-sm text-[#1B98E0]">{{ .role }}</h4>
+              <p class="text-sm">{{ .grade }}</p>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
   {{ end }}
 {{ end }}

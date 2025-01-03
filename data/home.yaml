@@ -1,6 +1,5 @@
 sections:
-  teams:
-    description: We Teach Varying Levels
+  - description: We Teach Varying Levels
     items:
       - name: A Team
         description: >
@@ -30,6 +29,75 @@ sections:
           based more on understanding physics from an experimental point of view through demonstrations. C Team topics include
           a brief introduction to topics covered in TJ Physics courses like Physics 1 and AP Physics, as well as additional
           topics such as optics and thermodynamics. Knowledge of calculus is not required for this team. In addition, C Team
-          also works with our Outreach Committee to organize physics demonstrations at community events. 
+          also works with our Outreach Committee to organize physics demonstrations at community events.
 
         pic: c-team.jpeg
+
+  - description: Outreach
+    items:
+      - name: TJ Peer Tutoring
+        description: >
+          In the 2015-2016 school year, Physics Team started a tutoring program to match our passionate team members to help TJ physics students.
+          This program was based off the motto that “the best way to learn something is to teach it to someone else".
+          The program was so well-received that we expanded our program to math, computer science, biology, and chemistry under the name
+          TJ Peer Tutoring.
+        pic: tutor.jpg
+
+      - name: TJ Physics Olympiad
+        description: >
+          TJPhO is a free, annual, online high school competition hosted by TJ High School for Sci & Tech.
+          One of the first international high school physics competitions, TJPhO challenges budding physicists with a
+          variety of physics problems, from fundamental to research-related.
+        pic: blackhole.jpg
+
+      - name: Techstravaganza 
+        description: >
+          Physics Team participates in Techstravaganza, an annual science fair held in TJ, in which teachers and high
+          school students interact with over a thousand elementary and middle school students. TJ Techstravaganza is organized
+          by TWIST. Click <a href="https://tjpartnershipfund.org/techstravaganza/" style="color:blue">here</a>
+          to learn more about Techstravaganza.
+        pic: tech.jpg
+
+      - name: TWIST
+        description: >
+          In an effort to combat the gender gap in physics participation, Physics Team partners with Tomorrow’s Women in
+          Science and Technology (TWIST) to foster physics interest among women. Physics Team’s Outreach Committee takes an
+          active role in helping set up physics booths at TJ Techstravaganza, which is organized by TWIST.
+        pic: twist.jpg
+
+
+team:
+  - name: Sanchali Banerjee
+    role: Captain
+    grade: Senior
+    pic: 2024-25/sanchali.png
+
+  - name: Sophia Hou
+    role: Co-Captain
+    grade: Junior
+    pic: 2024-25/sophia.png
+
+  - name: Eric Xie
+    role: Co-Captain
+    grade: Junior
+    pic: 2024-25/eric.png
+
+  - name: Jason Hao
+    role: Treasurer
+    grade: Senior
+    pic: 2024-25/jason.png
+
+  - name: Alexander Gu
+    role: Secretary
+    grade: Senior
+    pic: 2024-25/alex.png
+
+  - name: Ryan Singh
+    role: Publicist
+    grade: Junior
+    pic: 2024-25/ryan.png
+
+  - name: Aarush Deshpande
+    role: Webmaster
+    grade: Sophomore
+    pic: 2024-25/aarush.png
