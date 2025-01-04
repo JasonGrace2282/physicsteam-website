@@ -32,4 +32,12 @@ $(function() {
       }
     }
   });
+
+  // mobile menu
+  $("#navbar-button").on("click", () => {
+    // accessiblity
+    $("#navbar-button").attr("aria-expanded", (i, attr) => attr == "false" ? "true" : "false").toggleClass("bg-white");
+    // show the mobile menu
+    $("#navbar-default").toggleClass("hidden");
+  });
 })
