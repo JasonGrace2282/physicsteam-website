@@ -1,17 +1,17 @@
 <script src="js/nav.js"></script>
-<nav class="fixed inset-x-0 top-0 bg-transparent transition-all z-[1000]">
+<nav class="{{ if $.sticky }} sticky {{ else }} fixed {{ end }} inset-x-0 top-0 bg-transparent transition-all z-[1000]">
   <div class="max-w-screen-xl hidden md:flex md:items-center mx-auto p-4">
-    <div class="w-1/2">
-      <a class="px-5 text-white text-[2vh] font-medium" href="{{ $.Site.BaseURL }}" goto="home">Home</a>
+    <div class="flex justify-center w-1/2">
+      <a class="px-5 text-white text-[2vh] font-medium" href="{{ .Site.BaseURL }}" goto="home">Home</a>
       <a class="px-5 text-white text-[2vh] font-medium">TJPhO</a>
       <a class="px-5 text-white text-[2vh] font-medium">Events</a>
       <!-- <a class="px-5 text-white text-[2vh] font-medium">Rankings</a> -->
       <a class="px-5 text-white text-[2vh] font-medium">Past</a>
     </div>
-    <a href="{{ $.Site.BaseURL }}">
+    <a href="{{ .Site.BaseURL }}">
       <img src="img/logo/whitegreen.png" class="h-[4vh]">
     </a>
-    <div class="w-1/2">
+    <div class="flex justify-center w-1/2">
       <a class="px-5 text-white text-[2vh] font-medium">A Team</a>
       <a class="px-5 text-white text-[2vh] font-medium">B Team</a>
       <a class="px-5 text-white text-[2vh] font-medium">C Team</a>
@@ -27,7 +27,7 @@
     <div class="hidden bg-white w-full" id="navbar-default">
       <ul class="font-medium flex flex-col p-4">
         <li>
-          <a href="{{ $.Site.BaseURL }}" class="block py-2 px-3 text-blue-400 rounded">Home</a>
+          <a href="{{ .Site.BaseURL }}" class="block py-2 px-3 text-blue-400 rounded">Home</a>
         </li>
         <li>
           <a href="#" class="block py-2 px-3 text-blue-400 rounded">TJPhO</a>
@@ -50,4 +50,5 @@
 
       </ul>
     </div>
+  </div>
 </nav>
