@@ -1,14 +1,21 @@
 {{ define "head" }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script>
     $(function() {
-      $("#internship-content ul").addClass("list-disc list-inside");
+      $("#internship-content ul").addClass("list-disc list-inside mx-20");
       $("#internship-content a").addClass("text-blue-500");
 
       $("#internship-btn").on("click", function() {
-        $("div#internship-img").addClass("hidden");
-        $("#internship-content").removeClass("hidden");
+        $("#internship-content").removeClass("hidden").addClass("relative");
+        $("#internship-overlay").removeClass("hidden");
       });
-    })
+      $("#exit-internship").on("click", function() {
+        $("#internship-content").addClass("hidden").removeClass("relative");
+        $("#internship-overlay").addClass("hidden");
+      });
+    });
   </script>
 {{ end }}
 
@@ -21,7 +28,7 @@
       <div class="flex justify-center w-full transition pt-10 motion-safe:hover:scale-105 hover:cursor-pointer">
         <img src="img/events/alice.jpeg" class="absolute flex justify-center object-none rounded-lg w-[80%] h-[50vh] md:h-[60vh] shadow-inner">
         {{/* This tints the image to make it less bright */}}
-        <div class="absolute flex flex-col justify-between items-center pt-10 pb-5 bg-gradient-to-b from-black/60 via-black/20 to-black/80 z-50 w-[80%] h-[50vh] md:h-[60vh] rounded-lg" id="internship-btn">
+        <div class="absolute flex flex-col justify-between items-center pt-10 pb-5 bg-gradient-to-b from-black/60 via-black/20 to-black/80 z-10 w-[80%] h-[50vh] md:h-[60vh] rounded-lg" id="internship-btn">
           <h1 class="text-5xl text-white text-bold text-center">Internship Opportunities</h1>
           <p class="text-lg text-gray-300 w-[60%] text-center font-medium">
             There are a lot of opportunities avaliable for TJ students for Physics Internships.
@@ -30,8 +37,14 @@
         </div>
       </div>
     </div>
-    <div class="hidden" id="internship-content">
-      {{ .Content }}
+    <div class="flex w-full h-full justify-center transition rounded-lg hidden rounded shadow-xl z-50 pt-10" id="internship-content">
+      <div class="relative flex flex-col w-[85%] h-[70%] bg-white rounded-lg shadow-xl">
+        <i class="fa-solid fa-x flex self-end pr-10 pt-10 hover:cursor-pointer" id="exit-internship"></i>
+        <div>
+          {{ .Content }}
+        </div>
+      </div>
     </div>
+    <div class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-20" id="internship-overlay"></div>
   </div>
 {{ end }}

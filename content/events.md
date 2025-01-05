@@ -3,7 +3,7 @@ layout: events
 type: page
 ---
 
-# Internship Opportunities {class="text-blue-500 text-2xl md:text-4xl font-nunito font-thin"}
+# Internship Opportunities {class="text-blue-500 text-2xl text-center pb-5 md:text-4xl font-nunito font-thin"}
 
 - The Space Telescope Science Institute runs a handful of STEM programs, such as [this one](https://stsci.service-now.com/stem).
 - The Smithsonian runs a lot of [programs](https://internships.si.edu/opportunities/). Make sure to check it's an
