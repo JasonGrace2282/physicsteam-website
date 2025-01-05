@@ -21,7 +21,7 @@
           <div class="flex flex-col flex-wrap mx-0 justify-evenly
             {{ if not (modBool $index 2) }} md:flex-row-reverse {{ else }} md:flex-row {{ end }}
             mx-10 md:mx-40 py-10 first:pt-0">
-            <div class="mt-[3vh] mb-[8vh] h-[40vh] md:w-[40%] flex justify-center
+            <div class="mt-[3vh] mb-[8vh] md:h-[40vh] md:w-[40%] flex justify-center
               {{ if modBool $index 2 }} md:rotate-1  {{ else }} md:-rotate-1 {{ end }} md:-translate-x-[4vh] shadow-lg">
               <img src="img/home/{{ .pic }}" class="h-full w-full flex relative items-center justify-center overflow-hidden rounded-lg">
             </div>
