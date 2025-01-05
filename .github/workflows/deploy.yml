@@ -23,7 +23,19 @@ jobs:
           hugo-version: '0.140.0'
           extended: true
 
-      - name: Build
+      - name: Set up nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 23
+          cache: 'npm'
+
+      - name: Install JS dependencies
+        run: npm install
+
+      - name: Build Tailwind CSS
+        run: npx tailwindcss -i ./static/css/input.css -o ./static/dist/output.css --minify
+
+      - name: Build Site
         run: hugo --minify
 
       - name: Deploy
