@@ -3,6 +3,11 @@
     $(function() {
       $("#internship-content ul").addClass("list-disc list-inside");
       $("#internship-content a").addClass("text-blue-500");
+
+      $("#internship-btn").on("click", function() {
+        $("div#internship-img").addClass("hidden");
+        $("#internship-content").removeClass("hidden");
+      });
     })
   </script>
 {{ end }}
@@ -12,13 +17,21 @@
   <div class="bg-gradient-to-l from-teal-400 to-blue-400 w-screen h-screen">
     {{ partial "nav" (dict "context" . "sticky" true) }}
 
-    <div class="flex flex-col justify-center w-full mx-20">
-      <div class="w-[70%] bg-white rounded-lg h-[30%]">
-
+    <div class="flex justify-center w-full mx-auto" id="internship-img">
+      <div class="flex justify-center w-full transition pt-10 motion-safe:hover:scale-105 hover:cursor-pointer">
+        <img src="img/events/alice.jpeg" class="absolute flex justify-center object-none rounded-lg w-[80%] h-[50vh] md:h-[60vh] shadow-inner">
+        {{/* This tints the image to make it less bright */}}
+        <div class="absolute flex flex-col justify-between items-center pt-10 pb-5 bg-gradient-to-b from-black/60 via-black/20 to-black/80 z-50 w-[80%] h-[50vh] md:h-[60vh] rounded-lg" id="internship-btn">
+          <h1 class="text-5xl text-white text-bold text-center">Internship Opportunities</h1>
+          <p class="text-lg text-gray-300 w-[60%] text-center font-medium">
+            There are a lot of opportunities avaliable for TJ students for Physics Internships.
+            Here are just a few common ones students do each year.
+          </p>
+        </div>
       </div>
-      <div class="hidden" id="internship-content">
-        {{ .Content }}
-      </div>
+    </div>
+    <div class="hidden" id="internship-content">
+      {{ .Content }}
     </div>
   </div>
 {{ end }}
