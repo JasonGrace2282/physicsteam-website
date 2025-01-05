@@ -8,5 +8,5 @@
   <title>{{ $.Site.Title }}</title>
 {{ end }}
 {{ if not hugo.IsProduction }}
-  <base href="{{ $.Site.BaseURL }}">
+  <base href='{{ absURL "" }}'>
 {{ end }}

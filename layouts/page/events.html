@@ -1,8 +1,24 @@
+{{ define "head" }}
+  <script>
+    $(function() {
+      $("#internship-content ul").addClass("list-disc list-inside");
+      $("#internship-content a").addClass("text-blue-500");
+    })
+  </script>
+{{ end }}
+
 {{ define "main" }}
 
   <div class="bg-gradient-to-l from-teal-400 to-blue-400 w-screen h-screen">
     {{ partial "nav" (dict "context" . "sticky" true) }}
 
-    {{ .Content }}
+    <div class="flex flex-col justify-center w-full mx-20">
+      <div class="w-[70%] bg-white rounded-lg h-[30%]">
+
+      </div>
+      <div class="hidden" id="internship-content">
+        {{ .Content }}
+      </div>
+    </div>
   </div>
 {{ end }}
