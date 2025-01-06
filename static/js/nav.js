@@ -24,11 +24,11 @@ $(function() {
       if (scrolled()) {
         $("nav").removeClass("bg-transparent").addClass("bg-white");
         $("nav .text-white").removeClass("text-white").addClass("text-teal-400");
-        $("nav img").attr("src", "img/logo/bluegreen.png");
+        $("nav img").attr("src", bluegreen);
       } else {
         $("nav").removeClass("bg-white").addClass("bg-transparent");
         $("nav .text-teal-400").removeClass("text-teal-400").addClass("text-white");
-        $("nav img").attr("src", "img/logo/whitegreen.png");
+        $("nav img").attr("src", whitegreen);
       }
     }
   });
