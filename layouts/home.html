@@ -23,7 +23,7 @@
             mx-10 md:mx-40 py-10 first:pt-0">
             <div class="mt-[3vh] mb-[8vh] md:h-[40vh] md:w-[40%] flex justify-center
               {{ if modBool $index 2 }} md:rotate-1  {{ else }} md:-rotate-1 {{ end }} md:-translate-x-[4vh] shadow-lg">
-              <img src="img/home/{{ .pic }}" class="h-full w-full flex relative items-center justify-center overflow-hidden rounded-lg">
+              <img src='{{ printf "img/home/%s" .pic | relURL }}' class="h-full w-full flex relative items-center justify-center overflow-hidden rounded-lg">
             </div>
             <div class="relative md:w-[40%] px-3.5">
               <h3 class="text-3xl text-teal-500 text-center">{{ $item.name }}</h3>
@@ -49,7 +49,7 @@
         {{ range $index, $member := .team }}
           <div class="flex justify-left items-center scale-75
             {{ if and $isSingleLastRow (eq $index (sub $total 1)) }} md:col-start-2 {{ end }}">
-            <img src="img/team/{{ .pic }}" class="h-[20vh] w-[20vh] rounded-full shadow-lg">
+            <img src='{{ printf "img/team/%s" .pic | relURL }}' class="h-[20vh] w-[20vh] rounded-full shadow-lg">
             <div class="flex flex-col pl-5">
               <h3 class="text-sm text-[#3D348B]">{{ .name }}</h3>
               <h4 class="text-sm text-[#1B98E0]">{{ .role }}</h4>
