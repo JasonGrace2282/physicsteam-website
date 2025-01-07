@@ -20,7 +20,7 @@
       });
 
       $(".click-to-expand").on("click", function() {
-        $(this).find(".expanded").removeClass("hidden").addClass("block");
+        $(this).parent().find(".expanded").removeClass("hidden").addClass("block");
         popup_overlay.removeClass("hidden");
       });
     });
@@ -62,7 +62,7 @@
           <h2 class="text-5xl text-white text-center pb-5">{{ .description }}</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 w-10/12">
             {{ range .items }}
-              <div class="grid grid-cols-1 place-items-center transition hover:scale-105 click-to-expand">
+              <div class="grid grid-cols-1 place-items-center transition z-0 hover:scale-105 click-to-expand">
                 <div class="flex justify-center col-start-1 row-start-1 my-3 mx-3 h-[40vh]">
                   <img src='{{ printf "img/events/%s" .cover | relURL }}' class="aspect-square rounded-lg object-cover">
                 </div>
@@ -70,21 +70,21 @@
                   <p class="text-white text-2xl text-center pt-3 mx-2">{{ .title }}</p>
                   <p class="text-white text-sm text-center pb-2">Click to view</p>
                 </div>
-                {{/* The popup when clicked */}}
-                <div class="hidden fixed m-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 bg-white w-11/12 opacity-100 expanded pointer-events-none p-5 rounded-lg">
-                  <h3 class="text-5xl text-blue-500 text-center">{{ .title }}</h3>
-                  <p class="text-lg text-center">
-                    Presented by {{ .presenter }} - {{ .date }}
+              </div>
+              {{/* The popup when clicked */}}
+              <div class="hidden fixed m-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 bg-white w-11/12 opacity-100 expanded p-5 rounded-lg z-50">
+                <h3 class="text-5xl text-blue-500 text-center">{{ .title }}</h3>
+                <p class="text-lg text-center">
+                  Presented by {{ .presenter }} - {{ .date }}
+                </p>
+                {{ if isset . "extra" }}
+                  <p class="text-xl text-center">
+                    {{ transform.Markdownify .extra }}
                   </p>
-                  {{ if isset . "extra" }}
-                    <p class="text-xl text-center">
-                      {{ transform.Markdownify .extra }}
-                    </p>
-                  {{ end }}
-                  <iframe class="aspect-video w-8/12 text-center m-auto z-50" src="{{ .video }}" title="{{ .title }} - {{ .author }}"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+                {{ end }}
+                <iframe class="aspect-video w-8/12 text-center m-auto z-50" src="{{ .video }}" title="{{ .title }} - {{ .author }}"
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             {{ end }}
           </div>
