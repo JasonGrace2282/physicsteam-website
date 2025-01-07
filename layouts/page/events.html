@@ -20,8 +20,12 @@
       });
 
       $(".click-to-expand").on("click", function() {
-        $(this).parent().find(".expanded").removeClass("hidden").addClass("block");
+        $(this).parent().find(".expanded").removeClass("hidden").addClass("flex flex-col");
         popup_overlay.removeClass("hidden");
+      });
+      $(".exit-popup").on("click", function() {
+        $(this).parent().parent().addClass("hidden").removeClass("flex flex-col");
+        popup_overlay.addClass("hidden");
       });
     });
   </script>
@@ -48,8 +52,8 @@
       </div>
     </div>
     <div class="flex w-full h-full justify-center transition rounded-lg hidden rounded shadow-xl z-50 pt-10" id="internship-content">
-      <div class="relative flex flex-col w-[90%] md:w-[60%] lg:w-[40%] max-w-lg h-auto bg-white rounded-lg shadow-xl p-6">
-        <i class="fa-solid fa-x flex self-end pr-10 pt-10 hover:cursor-pointer" id="exit-internship"></i>
+      <div class="fixed m-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col w-11/12 h-auto md:min-h-[90%] bg-white rounded-lg shadow-xl p-6">
+        <i class="fa-solid fa-x flex self-end pr-10 pt-5 hover:cursor-pointer" id="exit-internship"></i>
         <div>
           {{ .Content }}
         </div>
@@ -62,29 +66,34 @@
           <h2 class="text-5xl text-white text-center pb-5">{{ .description }}</h2>
           <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 w-10/12">
             {{ range .items }}
-              <div class="grid grid-cols-1 place-items-center transition z-0 hover:scale-105 click-to-expand">
-                <div class="flex justify-center col-start-1 row-start-1 my-3 mx-3 h-[40vh]">
-                  <img src='{{ printf "img/events/%s" .cover | relURL }}' class="aspect-square rounded-lg object-cover">
+              <div class="flex">
+                <div class="grid grid-cols-1 place-items-center transition z-0 hover:scale-105 hover:cursor-pointer click-to-expand">
+                  <div class="flex justify-center col-start-1 row-start-1 my-3 mx-3 h-[40vh]">
+                    <img src='{{ printf "img/events/%s" .cover | relURL }}' class="aspect-square rounded-lg object-cover">
+                  </div>
+                  <div class="flex flex-col justify-between row-start-1 col-start-1 h-[40vh] aspect-square rounded-lg bg-gradient-to-b from-black/60 via-black/20 to-black/80">
+                    <p class="text-white text-2xl text-center pt-3 mx-2">{{ .title }}</p>
+                    <p class="text-white text-sm text-center pb-2">Click to view</p>
+                  </div>
                 </div>
-                <div class="flex flex-col justify-between row-start-1 col-start-1 h-[40vh] aspect-square rounded-lg bg-gradient-to-b from-black/60 via-black/20 to-black/80">
-                  <p class="text-white text-2xl text-center pt-3 mx-2">{{ .title }}</p>
-                  <p class="text-white text-sm text-center pb-2">Click to view</p>
-                </div>
-              </div>
-              {{/* The popup when clicked */}}
-              <div class="hidden fixed m-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 bg-white w-11/12 opacity-100 expanded p-5 rounded-lg z-50">
-                <h3 class="text-5xl text-blue-500 text-center">{{ .title }}</h3>
-                <p class="text-lg text-center">
-                  Presented by {{ .presenter }} - {{ .date }}
-                </p>
-                {{ if isset . "extra" }}
-                  <p class="text-xl text-center">
-                    {{ transform.Markdownify .extra }}
+                {{/* The popup when clicked */}}
+                <div class="hidden fixed m-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 bg-white w-11/12 opacity-100 expanded p-5 rounded-lg z-50 h-5/6 overflow-y-scroll">
+                  <div class="flex justify-end">
+                    <i class="fa-solid fa-x pr-10 pt-5 hover:cursor-pointer exit-popup"></i>
+                  </div>
+                  <h3 class="text-5xl text-blue-500 text-center">{{ .title }}</h3>
+                  <p class="text-lg text-center py-2">
+                    Presented by {{ .presenter }} - {{ .date }}
                   </p>
-                {{ end }}
-                <iframe class="aspect-video w-8/12 text-center m-auto z-50" src="{{ .video }}" title="{{ .title }} - {{ .author }}"
-                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  {{ if isset . "extra" }}
+                    <p class="text-xl text-center">
+                      {{ transform.Markdownify .extra }}
+                    </p>
+                  {{ end }}
+                  <iframe class="aspect-video w-11/12 text-center m-auto rounded-md z-50" src="{{ .video }}" title="{{ .title }} - {{ .author }}"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
               </div>
             {{ end }}
           </div>
