@@ -7,13 +7,21 @@
       $("#internship-content ul").addClass("list-disc list-inside mx-20");
       $("#internship-content a").addClass("text-blue-500");
 
+      const popup_overlay = $("#popup-overlay");
+
       $("#internship-btn").on("click", function() {
         $("#internship-content").removeClass("hidden").addClass("relative");
-        $("#internship-overlay").removeClass("hidden");
+        popup_overlay.removeClass("hidden");
       });
+
       $("#exit-internship").on("click", function() {
         $("#internship-content").addClass("hidden").removeClass("relative");
-        $("#internship-overlay").addClass("hidden");
+        popup_overlay.addClass("hidden");
+      });
+
+      $(".click-to-expand").on("click", function() {
+        $(this).find(".expanded").removeClass("hidden").addClass("block");
+        popup_overlay.removeClass("hidden");
       });
     });
   </script>
@@ -21,16 +29,18 @@
 
 {{ define "main" }}
 
-  <div class="bg-gradient-to-l from-teal-400 to-blue-400 w-screen h-screen">
+  <div class="flex flex-col justify-center bg-gradient-to-l from-teal-400 to-blue-400 w-screen min-h-screen">
     {{ partial "nav" (dict "context" . "sticky" true) }}
 
     <div class="flex justify-center w-full mx-auto" id="internship-img">
-      <div class="flex justify-center w-full transition pt-10 motion-safe:hover:scale-105 hover:cursor-pointer">
-        <img src='{{ relURL "img/events/alice.jpeg" }}' class="absolute flex justify-center object-none rounded-lg w-[80%] h-[50vh] md:h-[60vh] shadow-inner">
+      {{/* This little trick creates a grid with only one row/col, and puts both divs in row 1 col 1 */}}
+      {{/* This allows us to overlay a shadow div, which dulls the image */}}
+      <div class="grid grid-cols-1 place-items-center w-full transition pt-10 motion-safe:hover:scale-105 hover:cursor-pointer">
+        <img src='{{ relURL "img/events/alice.jpeg" }}' class="flex justify-center row-start-1 col-start-1 object-none rounded-lg w-10/12 h-[50vh] md:h-[60vh] shadow-inner">
         {{/* This tints the image to make it less bright */}}
-        <div class="absolute flex flex-col justify-between items-center pt-10 pb-5 bg-gradient-to-b from-black/60 via-black/20 to-black/80 z-10 w-[80%] h-[50vh] md:h-[60vh] rounded-lg" id="internship-btn">
+        <div class="flex flex-col justify-between items-center row-start-1 col-start-1 pt-10 pb-5 bg-gradient-to-b from-black/60 via-black/20 to-black/80 z-10 w-10/12 h-[50vh] md:h-[60vh] rounded-lg" id="internship-btn">
           <h1 class="text-5xl text-white text-bold text-center">Internship Opportunities</h1>
-          <p class="text-lg text-gray-300 w-[60%] text-center font-medium">
+          <p class="text-lg text-gray-300 w-8/12 text-center font-medium">
             There are a lot of opportunities avaliable for TJ students for Physics Internships.
             Here are just a few common ones students do each year.
           </p>
@@ -38,13 +48,49 @@
       </div>
     </div>
     <div class="flex w-full h-full justify-center transition rounded-lg hidden rounded shadow-xl z-50 pt-10" id="internship-content">
-      <div class="relative flex flex-col w-[85%] h-[70%] bg-white rounded-lg shadow-xl">
+      <div class="relative flex flex-col w-[90%] md:w-[60%] lg:w-[40%] max-w-lg h-auto bg-white rounded-lg shadow-xl p-6">
         <i class="fa-solid fa-x flex self-end pr-10 pt-10 hover:cursor-pointer" id="exit-internship"></i>
         <div>
           {{ .Content }}
         </div>
       </div>
     </div>
-    <div class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-20" id="internship-overlay"></div>
+    <div class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-30" id="popup-overlay"></div>
+    <div class="flex flex-col justify-center w-full pt-20">
+      {{ range .Site.Data.events }}
+        <div class="flex flex-col justify-center items-center w-full py-5 first:pt-0">
+          <h2 class="text-5xl text-white text-center pb-5">{{ .description }}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 w-10/12">
+            {{ range .items }}
+              <div class="grid grid-cols-1 place-items-center transition hover:scale-105 click-to-expand">
+                <div class="flex justify-center col-start-1 row-start-1 my-3 mx-3 h-[40vh]">
+                  <img src='{{ printf "img/events/%s" .cover | relURL }}' class="aspect-square rounded-lg object-cover">
+                </div>
+                <div class="flex flex-col justify-between row-start-1 col-start-1 h-[40vh] aspect-square rounded-lg bg-gradient-to-b from-black/60 via-black/20 to-black/80">
+                  <p class="text-white text-2xl text-center pt-3 mx-2">{{ .title }}</p>
+                  <p class="text-white text-sm text-center pb-2">Click to view</p>
+                </div>
+                {{/* The popup when clicked */}}
+                <div class="hidden fixed m-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 bg-white w-11/12 opacity-100 expanded pointer-events-none p-5 rounded-lg">
+                  <h3 class="text-5xl text-blue-500 text-center">{{ .title }}</h3>
+                  <p class="text-lg text-center">
+                    Presented by {{ .presenter }} - {{ .date }}
+                  </p>
+                  {{ if isset . "extra" }}
+                    <p class="text-xl text-center">
+                      {{ transform.Markdownify .extra }}
+                    </p>
+                  {{ end }}
+                  <iframe class="aspect-video w-8/12 text-center m-auto z-50" src="{{ .video }}" title="{{ .title }} - {{ .author }}"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
   </div>
 {{ end }}
+

@@ -4,14 +4,14 @@
 
   {{ with .Site.Data.home }}
     <div class="flex flex-col justify-center items-center py-5">
-      <div class="flex flex-col justify-center items-center w-[70%]">
+      <div class="flex flex-col justify-center items-center w-9/12">
         {{ $.Content }}
       </div>
     </div>
 
     {{ range .sections }}
       <div class="flex justify-center items-center">
-        <hr class="border-t w-[80%] bg-lightgray">
+        <hr class="border-t w-10/12 bg-lightgray">
       </div>
 
       <div class="flex flex-col justify-center items-center py-10">
@@ -21,7 +21,7 @@
           <div class="flex flex-col flex-wrap mx-0 justify-evenly
             {{ if not (modBool $index 2) }} md:flex-row-reverse {{ else }} md:flex-row {{ end }}
             mx-10 md:mx-40 py-10 first:pt-0">
-            <div class="mt-[3vh] mb-[8vh] md:h-[40vh] md:w-[40%] flex justify-center
+            <div class="mt-[3vh] mb-[8vh] md:h-[40vh] md:w-5/12 flex justify-center
               {{ if modBool $index 2 }} md:rotate-1  {{ else }} md:-rotate-1 {{ end }} md:-translate-x-[4vh] shadow-lg">
               <img src='{{ printf "img/home/%s" .pic | relURL }}' class="h-full w-full flex relative items-center justify-center overflow-hidden rounded-lg">
             </div>
@@ -35,7 +35,7 @@
     {{ end }}
 
     <div class="flex justify-center items-center">
-      <hr class="border-t w-[80%] bg-lightgray">
+      <hr class="border-t w-10/12 bg-lightgray">
     </div>
 
     <div class="flex flex-col justify-center items-center py-10">
