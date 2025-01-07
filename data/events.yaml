@@ -1,0 +1,76 @@
+- description: Guest Speakers
+  items:
+    - title: Quantum Computing
+      presenter: Dr. Joshua Issacson
+      date: March 5, 2021
+      extra: Here is the textbook Dr. Issacson [published](https://link.springer.com/book/10.1007/978-3-030-61601-4)
+      video: https://www.youtube.com/embed/QE3hhLlZ_uE
+      cover: 20-21/quantumcomputing.png
+
+    - title: Dark Energy
+      presenter: Dr. Kyle Helson
+      date: December 11, 2020
+      video: https://www.youtube.com/embed/lkoTXPUCZyA
+      cover: 20-21/darkenergy.png
+
+    - title: Black Holes
+      presenter: Dr. Zoltan Haiman
+      date: December 4, 2020
+      video: https://www.youtube.com/embed/IHRc4qcKKr8
+      cover: 20-21/blackholes.png
+
+    - title: Dark Matter
+      presenter: Dr. Regina Caputo
+      date: October 16, 2020
+      video: https://www.youtube.com/embed/SeLB26geQSE
+      cover: 20-21/darkmatter.png
+
+- description: Summer Lectures
+  items:
+    - title: Conserved Quantities
+      presenter: Bryan Lu
+      date: September 7, 2020
+      video: https://www.youtube.com/embed/4w8EuSIF-gk
+      cover: summer/cons.png
+
+    - title: Forces Problem Solving
+      presenter: Kevin Zhang
+      date: August 29, 2020
+      video: https://www.youtube.com/embed/Mb3EddS1eaY
+      cover: summer/forceprobs.png
+
+    - title: Friction Springs
+      presenter: Connor Mooney
+      date: August 22, 2020
+      video: https://www.youtube.com/embed/NDN_p1ht9LE
+      cover: summer/friction.png
+
+    - title: Newton's Laws and The Method
+      presenter: Irfan Nafi
+      date: August 15, 2020
+      video: https://www.youtube.com/embed/ccWCKlpQyjc
+      cover: summer/laws.png
+
+    - title: Uniform Circular Motion, Advanced Kinematics
+      presenter: Larry Shi
+      date: August 1, 2020
+      video: https://www.youtube.com/embed/P_qBI3k7Quk
+      cover: summer/ucm.png
+
+    - title: Basic Calculus and 1D Kinematics
+      presenter: Anya Mischel
+      date: July 25, 2020
+      video: https://www.youtube.com/embed/o2-AR_su5lI
+      cover: summer/calc.png
+
+    - title: Kinematics Problem Solving
+      presenter: Amrita Sahu
+      date: August 8, 2020
+      video: https://www.youtube.com/embed/rH6YlLG2Sbo
+      cover: summer/kinprobs.png
+
+    - title: Vectors and Dimensions
+      presenter: Bryan Zhang
+      date: July 18, 2020
+      video: https://www.youtube.com/embed/ZPYLFRiGxyA
+      cover: summer/vectors.png
