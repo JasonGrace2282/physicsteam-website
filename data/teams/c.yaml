@@ -1,0 +1,111 @@
+folders:
+  - name: Mechanics
+    contents:
+      - name: Mechanics Review
+        base: Mechanics/C_Mechanics_Review.pdf
+      - name: Mechanics Review Solutions
+        base: Mechanics/C_MechanicsReview_Solutions.pdf
+  - name: Kinematics
+    contents:
+      - name: 1D Kinematics
+        base: 1D_Kinematics/1D_Kinematics.pdf
+      - name: 2D Kinematics Review Problem
+        base: 2D_Kinematics/Kinematics_Review_Problem.pdf
+      - name: 2D Kinematics
+        base: 2D_Kinematics/Kinematics.pdf
+      - name: 2D Kinematics Problem Set 11.1.13
+        base: 2D_Kinematics/KinematicsProblemSet11.1.13.pdf
+      - name: 2D Kinematics Problem Set 11.8.13
+        base: 2D_Kinematics/KinematicsProblemSet11.8.13.pdf
+      - name: 2D Kinematics Solutions 11.1.13
+        base: 2D_Kinematics/KinematicsSolutions11.1.13.pdf
+      - name: 2D Kinematics Solutions 11.8.13
+        base: 2D_Kinematics/KinematicsSolutions11.8.13.pdf
+      - name: 2D Kinematics 10.18.13
+        base: 2D_Kinematics/Kinematics10.18.13.pdf
+      - name: 2D Kinematics Solutions
+        base: 2D_Kinematics/2D_Kinematics_solutions.pdf
+      - name: 2D Kinematics Final
+        base: 2D_Kinematics/2D_Kinematics_Final.pdf
+  - name: Gravity
+    contents:
+      - name: Gravitation Problem Solutions
+        base: Gravity/gravitationProblemSolutions.pdf
+      - name: Gravitation Electrostatics Problem Set (C)
+        base: Gravity/C_GravitationElectrostatics_Problem_Set.pdf
+      - name: Gravitation Lecture (C)
+        base: Gravity/C_Gravitation_Lecture.pdf
+      - name: Gravitation Solutions (C)
+        base: Gravity/C_Gravitation_Solutions.pdf
+      - name: Gravitation Lecture
+        base: Gravity/Gravitation_Lecture.pdf
+  - name: Energy
+    contents:
+      - name: Energy Lecture (C)
+        base: Energy/Energy_Lecture_C.pdf
+      - name: Energy Problem Set
+        base: Energy/Energy_Problem_Set.pdf
+  - name: Momentum
+    contents:
+      - name: Momentum and Collisions
+        base: Momentum/Momentum_and_Collisions.pdf
+  - name: Thermodynamics
+    contents:
+      - name: Thermodynamics
+        base: Thermodynamics/Thermodynamics.pdf
+  - name: Magnetism
+    contents:
+      - name: Magnetism Guest Lecture
+        base: Magnetism/Magnetism_Guest_Lecture.pdf
+  - name: Rotation
+    contents:
+      - name: Rotation Lecture
+        base: Rotation/Rotation_Lecture.pdf
+      - name: Rotational Kinematics
+        base: Rotation/RotationalKinematics.pdf
+      - name: Rotation
+        base: Rotation/Rotation.pdf
+  - name: Forces
+    contents:
+      - name: Forces (C)
+        base: Forces/C_Forces.pdf
+      - name: Forces Problem Solutions (C)
+        base: Forces/C_forces_problem_solutions.pdf
+      - name: Forces Problem Set (C)
+        base: Forces/C_Forces_Problem_Set.pdf
+  - name: Electricity
+    contents:
+      - name: Electric Potential Lecture
+        base: Electricity/Electric_Potential_Lecture.pdf
+      - name: Circuits Problem Set
+        base: Electricity/Circuits_Problem_Set.pdf
+      - name: Circuits Lecture
+        base: Electricity/Circuits_Lecture.pdf
+      - name: Electric Field
+        base: Electricity/Electric_Field.pdf
+      - name: Capacitance
+        base: Electricity/Capacitance.pdf
+  - name: Optics
+    contents:
+      - name: Optics Solutions
+        base: Optics/Optics_Solutions.pdf
+      - name: Optics Lecture
+        base: Optics/Optics_Lecture.pdf
+  - name: Vectors
+    contents:
+      - name: Vectors v2 No Comments
+        base: Vectors/Vectors_v2_no_comments.pdf
+      - name: Vectors Lecture Solutions
+        base: Vectors/Vectors_Lecture_Solutions.pdf
+  - name: Oscillations
+    contents:
+      - name: Simple Harmonic Motion
+        base: Oscillations/SHM.pdf
+  - name: Math
+    contents:
+      - name: Taylor Approximations 06/07
+        base: Math/TaylorApproximations_0607.pdf
+      - name: Taylor Approximations 05/06
+        base: Math/TaylorApproximations_0506.pdf
+      - name: Discrete Calculus 07/08
+        base: Math/DiscreteCalculus_0708.pdf

@@ -1,0 +1,165 @@
+folders:
+  - name: Math
+    contents:
+      - name: Lagrange Multipliers and Extrema
+        base: Math/E_-_Lagrange_Multipliers_and_Extrema.pdf
+      - name: Multivariable Overview
+        base: Math/1_-_Multivariable_Overview.pdf
+      - name: Vector Calculus 0708
+        base: Math/VectorCalculus_0708.pdf
+      - name: Surface Integrals 0708
+        base: Math/SurfaceIntegrals_0708.pdf
+      - name: Multiple Integrals 0708
+        base: Math/MultipleIntegrals_0708.pdf
+      - name: Differential Equations 0607
+        base: Math/DifferentialEquations_0607.pdf
+      - name: Complex and Euler 0607
+        base: Math/ComplexAndEuler_0607.pdf
+
+  - name: Forces
+    contents:
+      - name: Introduction and Problems in Forces
+        base: Forces/Introduction_and_Problems_in_Forces.pdf
+      - name: Introduction and Problems in Forces Solutions
+        base: Forces/Introduction_and_Problems_in_Forces_Solutions.pdf
+      - name: Fluid Mechanics Lecture
+        base: Forces/Fluid_Mechanics_Lecture.pdf
+      - name: Central Forces Solutions
+        base: Forces/Central_Forces_Solutions.pdf
+      - name: Central Forces Lecture 2
+        base: Forces/Central_Forces_Lecture-2.pdf
+      - name: Beams and Chains
+        base: Forces/Beams_and_Chains.pdf
+
+  - name: Momentum and Energy
+    contents:
+      - name: The Conservation of Momentum with Changing Mass
+        base: Momentum_Energy/The_Conservation_of_Momentum_with_Changing_Mass.pdf
+      - name: The Conservation of Momentum with Changing Mass - 2
+        base: Momentum_Energy/The_Conservation_of_Momentum_with_Changing_Mass-2.pdf
+      - name: Momentum Energy Problem Set 2014-15 Solutions
+        base: Momentum_Energy/Momentum_Energy_PS__2014_15__Solutions.pdf
+      - name: Momentum Energy Problem Set 2
+        base: Momentum_Energy/Momentum_Energy_Problem_Set_2.pdf
+      - name: Energy Problem Set 1
+        base: Momentum_Energy/Energy_Problem_Set_1.pdf
+      - name: Energy and Momentum Solutions
+        base: Momentum_Energy/Energy_and_Momentum_Solutions.pdf
+      - name: Conservation of Momentum with Changing Mass Lecture Solutions
+        base: Momentum_Energy/Conservation_of_Momentum_with_Changing_Mass_Lecture_Solutions.pdf
+      - name: An Interesting Problem
+        base: Momentum_Energy/An_Interesting_Problem.pdf
+
+  - name: Rotation
+    contents:
+      - name: Rotation 2013-2014 Problem Set Solutions
+        base: Rotation/Rotation_2013_2014_Problem_Set_Solutions.pdf
+      - name: Non-Uniform Circular Motion
+        base: Rotation/Non_Uniform_Circular_Motion.pdf
+      - name: Non-Uniform Circular Motion Solution Set
+        base: Rotation/Non_Uniform_Circular_Motion_Solution_Set.pdf
+      - name: Non-Uniform Circular Motion and Practice Problems
+        base: Rotation/Non_Uniform_Circular_Motion_and_Practice_Problems.pdf
+
+  - name: Lagrangian Mechanics
+    contents:
+      - name: Noether Hamiltonian
+        base: Lagrangian/2_-_Noether_Hamiltonian.pdf
+      - name: Lagrangian Mechanics Introduction
+        base: Lagrangian/1_-_Lagrangian_Mechanics_Intro.pdf
+      - name: Lagrangian Mechanics Part 1.5
+        base: Lagrangian/1.5_-_Lagrangian.pdf
+      - name: Calculus of Variations
+        base: Lagrangian/0_-_Calculus_of_Variations.pdf
+      - name: Noether Theorem
+        base: Lagrangian/noether.pdf
+      - name: Lagrangian Mechanics Solutions
+        base: Lagrangian/LagrangianMechanicsSolutions.pdf
+      - name: Lagrangian Mechanics Overview
+        base: Lagrangian/LagrangianMechanics.pdf
+      - name: Lagrangian and Hamiltonian Mechanics Lecture
+        base: Lagrangian/Lagrangian_and_Hamiltonian_Mechanics_LECTURE.pdf
+
+  - name: Waves
+    contents:
+      - name: Optics
+        base: Waves/Optics.pdf
+      - name: Wave Mechanics
+        base: Waves/Wave_Mechanics.pdf
+      - name: The Wave Equation
+        base: Waves/The_Wave_Equation.pdf
+      - name: The Wave Equation - 2
+        base: Waves/The_Wave_Equation-2.pdf
+      - name: Advanced Waves
+        base: Waves/AdvancedWaves.pdf
+
+  - name: Electromagnetism
+    contents:
+      - name: Potential and Capacitance Problems
+        base: Electromagnetism/Potential_and_Capacitance_Problems.pdf
+      - name: EM Waves 2014
+        base: Electromagnetism/EMWaves2014.pdf
+      - name: Electrostatics Problem Set Solutions
+        base: Electromagnetism/Electrostatics_Problem_Set_Solutions.pdf
+
+  - name: Thermodynamics
+    contents:
+      - name: 3 - Entropy and Maxwell Relations
+        base: Thermodynamics/3_-_Entropy_and_Maxwell_Relations.pdf
+      - name: 2 - Second Law
+        base: Thermodynamics/2_-_Second_Law.pdf
+      - name: 1 - First Law and Work
+        base: Thermodynamics/1_-_First_Law_and_Work.pdf
+      - name: Guest Lecture by Bryan Lu
+        base: Thermodynamics/Thermodynamics_GuestLecture_BryanLu.pdf
+      - name: Thermodynamics Problem Set Solutions
+        base: Thermodynamics/ThermoPSetSolutions.pdf
+      - name: Thermodynamics Lecture Solutions
+        base: Thermodynamics/ThermodynamicsLectureSolutions.pdf
+      - name: Thermodynamics Problem Set 2
+        base: Thermodynamics/Thermodynamics_Problem_Set-2.pdf
+      - name: The Second Law of Thermodynamics
+        base: Thermodynamics/The_Second_Law_of_Thermodynamics.pdf
+      - name: The Heat Equation
+        base: Thermodynamics/The_Heat_Equation.pdf
+      - name: The First Law of Thermodynamics
+        base: Thermodynamics/The_First_Law_of_Thermodynamics.pdf
+
+  - name: Quantum Mechanics
+    contents:
+      - name: Quantum Mechanics Solutions
+        base: Quantum_Mechanics/QuantumMechanicsSolutions.pdf
+      - name: Quantum Mechanics Part 2-8
+        base: Quantum_Mechanics/QuantumMechanicsPart2-8.pdf
+      - name: Quantum Mechanics Lecture 3.28.14
+        base: Quantum_Mechanics/QuantumMechanicsLecture3.28.14.pdf
+      - name: Quantum Mechanics Lecture 2.28.14-4
+        base: Quantum_Mechanics/QuantumMechanicsLecture2_28_14-4.pdf
+      - name: Quantum Mechanics Overview
+        base: Quantum_Mechanics/quantum.pdf
+      - name: Quantum Mechanics Part 2 Solutions
+        base: Quantum_Mechanics/QuantumMechanics2Solutions.pdf
+      - name: Quantum Mechanics Part 3-2
+        base: Quantum_Mechanics/Quantum_Mechanics_Part_3-2.pdf
+
+  - name: Special Relativity
+    contents:
+      - name: Intro to Special Relativity
+        base: Special_Relativity/Intro_to_Special_Relativity.pdf
+      - name: Special Relativity Mathing Ed
+        base: Special_Relativity/Special_Relativity_Mathing_ed.pdf
+      - name: Special Relativity Overview
+        base: Special_Relativity/Special_Relativity.pdf
+      - name: Special Relativity Problem Set 1
+        base: Special_Relativity/Special_Relativity_Problem_Set_1.pdf
+      - name: Relativistic Dynamics Part
+        base: Special_Relativity/relativistic-dynamics-part.pdf
+      - name: Basic Postulates of Special Relativity
+        base: Special_Relativity/Basic_Postulates_of_Special_Relativity.pdf
+      - name: Basic Postulates of Special Relativity Solutions
+        base: Special_Relativity/Basic_Postulates_of_Special_Relativity_Solutions.pdf
+
+  - name: General Relativity
+    contents:
+      - name: Lesson 1
+        base: General_Relativity/Lesson1.pdf

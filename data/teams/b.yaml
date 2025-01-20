@@ -1,0 +1,81 @@
+folders:
+  - name: Mechanics
+    contents:
+      - name: Mechanics Lecture
+        base: Mechanics/mechanics.pdf
+      - name: Forces Problems 10-17-2014
+        base: Forces/Forces_Problems_10_17_2014.pdf
+      - name: Forces Problem Set 1
+        base: Forces/Forces_Problem_Set1.pdf
+      - name: Forces Problem Set Solutions
+        base: Forces/Forces_Problem_Set_Solutions.pdf
+      - name: Forces Lecture
+        base: Forces/Forces_Lecture.pdf
+      - name: Forces 10-17-2014
+        base: Forces/Forces_10_17_2014.pdf
+      - name: Drag Forces
+        base: Forces/DragForces.pdf
+      - name: Forces Problem Set 1 (B)
+        base: Forces/B_Forces_Problem_Set_1.pdf
+      - name: Forces Lecture Solutions
+        base: Forces/AP_Forces_Lecture_Solutions.pdf
+  - name: Kinematics
+    contents:
+      - name: Kinematics Review
+        base: Kinematics/AP_Kinematics_Review.pdf
+      - name: Kinematics Review Solutions
+        base: Kinematics/AP_Kinematics_Review_Solutions.pdf
+  - name: Magnetism
+    contents:
+      - name: Magnetism Problem Set Solutions (B)
+        base: Magnetism/B_MagnetismPSetSolutions.pdf
+      - name: Magnetism Problem Set
+        base: Magnetism/B_Magnetism_Problem_Set.pdf
+  - name: Electricity
+    contents:
+      - name: Electrostatics Lecture 2
+        base: Electricity/Electrostatics_Lecture_2.pdf
+      - name: Electricity Lecture
+        base: Electricity/Electro_Lecture.pdf
+      - name: Circuits
+        base: Electricity/Circuits.pdf
+  - name: Electromagnetism
+    contents:
+      - name: Electromagnetic Study Guide
+        base: Electromagnetism/AP_E_M_StudyGuide.pdf
+  - name: Gravity
+    contents:
+      - name: Gravitation Field Analysis Lecture
+        base: Gravity/LEC_Gravitation__Field_Analysis_02-01-2017.pdf
+  - name: Energy
+    contents:
+      - name: Energy Lecture 10/24/14-1
+        base: Energy/Energy_Lecture_10_24_14-1.pdf
+      - name: Energy Lecture Problems Solutions
+        base: Energy/Energy_Lecture_Problems_Solutions.pdf
+  - name: Momentum
+    contents:
+      - name: Momentum Problem Set
+        base: Momentum/MomentumProblemSet.pdf
+      - name: Momentum Problems
+        base: Momentum/MomentumProblems.pdf
+      - name: Momentum Energy Problem Set 2 Solutions
+        base: Momentum/Momentum_Energy_Problem_Set_2_Solutions.pdf
+  - name: Rotation
+    contents:
+      - name: Rotation Lecture Solutions
+        base: Rotation/RotationLectureSolutions.pdf
+      - name: Rotation Problem Set Solutions
+        base: Rotation/RotationProblemSetSolutions.pdf
+      - name: Rotation Problems 12-12-2014
+        base: Rotation/Rotation_Problems_12_12_2014.pdf
+      - name: Rotation 12-5-2014
+        base: Rotation/Rotation_12_5_2014.pdf
+  - name: Vectors
+    contents:
+      - name: Vector Worksheet
+        base: Vectors/AP_Vector_Worksheet.pdf
+  - name: Calculus
+    contents:
+      - name: Calculus Notes Derivatives
+        base: Calculus/calculus_notes_derivatives.pdf

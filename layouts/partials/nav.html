@@ -7,7 +7,7 @@
   <div class="max-w-screen-xl hidden md:flex md:items-center mx-auto p-4">
     <div class="flex justify-center w-1/2">
       <a class="px-5 text-white text-[2vh] font-medium" href='{{ relURL "" }}' goto="home">Home</a>
-      <a class="px-5 text-white text-[2vh] font-medium">TJPhO</a>
+      <a class="px-5 text-white text-[2vh] font-medium" href='{{ relURL "tjpho" }}'>TJPhO</a>
       <a class="px-5 text-white text-[2vh] font-medium" href='{{ relURL "events" }}'>Events</a>
       <a class="px-5 text-white text-[2vh] font-medium" href='{{ relURL "past" }}'>Past</a>
     </div>
@@ -15,9 +15,10 @@
       <img src='{{ relURL "img/logo/whitegreen.png" }}' class="h-[4vh]">
     </a>
     <div class="flex justify-center w-1/2">
-      <a class="px-5 text-white text-[2vh] font-medium">A Team</a>
-      <a class="px-5 text-white text-[2vh] font-medium">B Team</a>
-      <a class="px-5 text-white text-[2vh] font-medium">C Team</a>
+      <a class="px-5 text-white text-[2vh] font-medium" href='{{ relURL "teams/a" }}'>A Team</a>
+      <a class="px-5 text-white text-[2vh] font-medium" href='{{ relURL "teams/b" }}'>B Team</a>
+      <a class="px-5 text-white text-[2vh] font-medium" href='{{ relURL "teams/c" }}'>C Team</a>
+      <a class="px-5 text-white text-[2vh] font-medium" href='{{ relURL "resources" }}'>C Team</a>
     </div>
   </div>
   <div class="flex flex-col w-full bg-white md:hidden">
@@ -39,7 +40,7 @@
           <a href='{{ relURL "" }}' class="block py-2 px-3 text-blue-400 rounded">Home</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-blue-400 rounded">TJPhO</a>
+          <a href='{{ relURL "tjpho" }}' class="block py-2 px-3 text-blue-400 rounded">TJPhO</a>
         </li>
         <li>
           <a href='{{ relURL "events" }}' class="block py-2 px-3 text-blue-400 rounded">Events</a>
@@ -48,13 +49,16 @@
           <a href='{{ relURL "past" }}' class="block py-2 px-3 text-blue-400 rounded">Past</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-blue-400 rounded">A Team</a>
+          <a href='{{ relURL "teams/a" }}' class="block py-2 px-3 text-blue-400 rounded">A Team</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-blue-400 rounded">B Team</a>
+          <a href='{{ relURL "teams/b" }}' class="block py-2 px-3 text-blue-400 rounded">B Team</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-blue-400 rounded">C Team</a>
+          <a href='{{ relURL "teams/c" }}' class="block py-2 px-3 text-blue-400 rounded">C Team</a>
+        </li>
+        <li>
+          <a href='{{ relURL "resources" }}' class="block py-2 px-3 text-blue-400 rounded">Resources</a>
         </li>
       </ul>
     </div>
