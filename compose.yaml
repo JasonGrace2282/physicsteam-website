@@ -1,0 +1,14 @@
+services:
+  hugo:
+    image: hugomods/hugo:std-base-0.141.0
+    command: server -D
+    volumes:
+      - .:/src
+    ports:
+      - 1313:1313
+
+  tailwind:
+    build: .
+    tty: true
+    volumes:
+      - .:/src

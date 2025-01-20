@@ -6,13 +6,17 @@ CI/CD will push a built copy onto branch `production`, which is what is running 
 the actual website.
 
 ## Developing
-First install `npm`, `git` and `Hugo`. Then, to install tailwind, run
+First [install `git`](https://git-scm.com/downloads) and clone the repository:
 ```
-npm install
+git clone https://github.com/tjphysicsteam/physicsteam-website
 ```
-To start working on the site, run the following commands in two different terminals:
-
+After that, [install Docker compose](https://docs.docker.com/compose/install/). To build
+the dependencies, run
 ```
-npx tailwindcss -i ./static/css/input.css -o ./static/dist/output.css --watch
-hugo server -D
+docker compose build
 ```
+Finally, to start working on the site run
+```
+docker compose up
+```
+and visit http://127.0.0.1:1313/
