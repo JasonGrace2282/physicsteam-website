@@ -1,0 +1,56 @@
+{{ define "head" }}
+  <script>
+    $(function() {
+      $(".floatable h1").addClass("text-blue-400 text-xl font-nunito font-thin");
+
+      setInterval(() => {
+        let lineHeight = Math.abs($("#timeline li:first").offset().top - $("#timeline li:last").offset().top);
+        $("#vertical-line").css("height", `${lineHeight}px`);
+      }, 100);
+    })
+  </script>
+{{ end }}
+
+{{ define "main" }}
+  <div class="flex flex-col text-center bg-gradient-to-bl from-cyan-500 via-blue-400 to-teal-400 w-screen min-h-screen">
+    {{ partial "nav" (dict "context" . "sticky" true) }}
+
+    <section class="flex flex-col items-center mx-auto w-full">
+      <div class="absolute h-[97%] w-[.75vh] bg-white mt-10 mx-auto" id="vertical-line"></div>
+
+      <ul class="text-center w-full pt-5 m-auto" id="timeline">
+        {{ range $.Site.Data.past }}
+          <li class="text-center pb-7 [&>.floatable]:even:float-right [&>.floatable]:odd:float-left overflow-auto">
+            <div class="relative text-left bg-white rounded-lg floatable max-w-[45%] m-10 mt-0 shadow-2xl shadow-gray-600">
+              <div class="m-5">
+                {{ transform.Markdownify .content }}
+                {{ if isset . "officers" }}
+                  <h1>Officers</h1>
+                  <ul class="flex flex-wrap list-disc list-inside">
+                    {{ range .officers }}
+                      <li class="flex pr-3 pb-2">
+                        {{ if isset . "pic" }}
+                          <img src='{{ printf "img/team/%s" .pic | relURL }}' class="h-8 rounded-full mr-2">
+                        {{ end }}
+                        <div class="flex flex-col">
+                          <p class="text-teal-400 text-sm font-sm">{{ .name }}</p>
+                          <p class="font-sm text-sm">{{ .role }}</p>
+                        </div>
+                      </li>
+                    {{ end }}
+                  </ul>
+                {{ end }}
+              </div>
+            </div>
+
+            <div class="absolute left-1/2 -translate-x-1/2 z-10 text-white w-8 h-8 bg-indigo-800 rounded-full flex justify-center items-center">
+              <p class="text-xs font-nunito leading-relaxed">
+              {{ .year }}
+              </p>
+            </div>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  </div>
+{{ end }}
