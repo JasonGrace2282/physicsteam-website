@@ -2,6 +2,7 @@
   <script>
     $(function() {
       $(".floatable h1").addClass("text-blue-400 text-xl font-nunito font-thin");
+      $(".floatable p").addClass("pb-3");
 
       setInterval(() => {
         let lineHeight = Math.abs($("#timeline li:first").offset().top - $("#timeline li:last").offset().top);
