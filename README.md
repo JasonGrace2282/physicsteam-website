@@ -5,6 +5,9 @@ to make it easier to maintain and develop.
 CI/CD will push a built copy onto branch `production`, which is what is running on
 the actual website.
 
+If you're unfamiliar with Hugo, check out [their docs](https://gohugo.io/documentation/).
+Also check out [this blog post](https://www.jakewiesler.com/blog/hugo-directory-structure) explaining the directory structure Hugo expects.
+
 ## Developing
 First [install `git`](https://git-scm.com/downloads) and clone the repository:
 ```
