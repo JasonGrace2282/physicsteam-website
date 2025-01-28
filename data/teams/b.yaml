@@ -2,80 +2,80 @@ folders:
   - name: Mechanics
     contents:
       - name: Mechanics Lecture
-        base: Mechanics/mechanics.pdf
+        base: Mechanics/mechanics
       - name: Forces Problems 10-17-2014
-        base: Forces/Forces_Problems_10_17_2014.pdf
+        base: Forces/Forces_Problems_10_17_2014
       - name: Forces Problem Set 1
-        base: Forces/Forces_Problem_Set1.pdf
+        base: Forces/Forces_Problem_Set1
       - name: Forces Problem Set Solutions
-        base: Forces/Forces_Problem_Set_Solutions.pdf
+        base: Forces/Forces_Problem_Set_Solutions
       - name: Forces Lecture
-        base: Forces/Forces_Lecture.pdf
+        base: Forces/Forces_Lecture
       - name: Forces 10-17-2014
-        base: Forces/Forces_10_17_2014.pdf
+        base: Forces/Forces_10_17_2014
       - name: Drag Forces
-        base: Forces/DragForces.pdf
+        base: Forces/DragForces
       - name: Forces Problem Set 1 (B)
-        base: Forces/B_Forces_Problem_Set_1.pdf
+        base: Forces/B_Forces_Problem_Set_1
       - name: Forces Lecture Solutions
-        base: Forces/AP_Forces_Lecture_Solutions.pdf
+        base: Forces/AP_Forces_Lecture_Solutions
   - name: Kinematics
     contents:
       - name: Kinematics Review
-        base: Kinematics/AP_Kinematics_Review.pdf
+        base: Kinematics/AP_Kinematics_Review
       - name: Kinematics Review Solutions
-        base: Kinematics/AP_Kinematics_Review_Solutions.pdf
+        base: Kinematics/AP_Kinematics_Review_Solutions
   - name: Magnetism
     contents:
       - name: Magnetism Problem Set Solutions (B)
-        base: Magnetism/B_MagnetismPSetSolutions.pdf
+        base: Magnetism/B_MagnetismPSetSolutions
       - name: Magnetism Problem Set
-        base: Magnetism/B_Magnetism_Problem_Set.pdf
+        base: Magnetism/B_Magnetism_Problem_Set
   - name: Electricity
     contents:
       - name: Electrostatics Lecture 2
-        base: Electricity/Electrostatics_Lecture_2.pdf
+        base: Electricity/Electrostatics_Lecture_2
       - name: Electricity Lecture
-        base: Electricity/Electro_Lecture.pdf
+        base: Electricity/Electro_Lecture
       - name: Circuits
-        base: Electricity/Circuits.pdf
+        base: Electricity/Circuits
   - name: Electromagnetism
     contents:
       - name: Electromagnetic Study Guide
-        base: Electromagnetism/AP_E_M_StudyGuide.pdf
+        base: Electromagnetism/AP_E_M_StudyGuide
   - name: Gravity
     contents:
       - name: Gravitation Field Analysis Lecture
-        base: Gravity/LEC_Gravitation__Field_Analysis_02-01-2017.pdf
+        base: Gravity/LEC_Gravitation__Field_Analysis_02-01-2017
   - name: Energy
     contents:
       - name: Energy Lecture 10/24/14-1
-        base: Energy/Energy_Lecture_10_24_14-1.pdf
+        base: Energy/Energy_Lecture_10_24_14-1
       - name: Energy Lecture Problems Solutions
-        base: Energy/Energy_Lecture_Problems_Solutions.pdf
+        base: Energy/Energy_Lecture_Problems_Solutions
   - name: Momentum
     contents:
       - name: Momentum Problem Set
-        base: Momentum/MomentumProblemSet.pdf
+        base: Momentum/MomentumProblemSet
       - name: Momentum Problems
-        base: Momentum/MomentumProblems.pdf
+        base: Momentum/MomentumProblems
       - name: Momentum Energy Problem Set 2 Solutions
-        base: Momentum/Momentum_Energy_Problem_Set_2_Solutions.pdf
+        base: Momentum/Momentum_Energy_Problem_Set_2_Solutions
   - name: Rotation
     contents:
       - name: Rotation Lecture Solutions
-        base: Rotation/RotationLectureSolutions.pdf
+        base: Rotation/RotationLectureSolutions
       - name: Rotation Problem Set Solutions
-        base: Rotation/RotationProblemSetSolutions.pdf
+        base: Rotation/RotationProblemSetSolutions
       - name: Rotation Problems 12-12-2014
-        base: Rotation/Rotation_Problems_12_12_2014.pdf
+        base: Rotation/Rotation_Problems_12_12_2014
       - name: Rotation 12-5-2014
-        base: Rotation/Rotation_12_5_2014.pdf
+        base: Rotation/Rotation_12_5_2014
   - name: Vectors
     contents:
       - name: Vector Worksheet
-        base: Vectors/AP_Vector_Worksheet.pdf
+        base: Vectors/AP_Vector_Worksheet
   - name: Calculus
     contents:
       - name: Calculus Notes Derivatives
-        base: Calculus/calculus_notes_derivatives.pdf
+        base: Calculus/calculus_notes_derivatives

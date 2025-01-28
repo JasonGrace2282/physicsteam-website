@@ -2,110 +2,110 @@ folders:
   - name: Mechanics
     contents:
       - name: Mechanics Review
-        base: Mechanics/C_Mechanics_Review.pdf
+        base: Mechanics/C_Mechanics_Review
       - name: Mechanics Review Solutions
-        base: Mechanics/C_MechanicsReview_Solutions.pdf
+        base: Mechanics/C_MechanicsReview_Solutions
   - name: Kinematics
     contents:
       - name: 1D Kinematics
-        base: 1D_Kinematics/1D_Kinematics.pdf
+        base: 1D_Kinematics/1D_Kinematics
       - name: 2D Kinematics Review Problem
-        base: 2D_Kinematics/Kinematics_Review_Problem.pdf
+        base: 2D_Kinematics/Kinematics_Review_Problem
       - name: 2D Kinematics
-        base: 2D_Kinematics/Kinematics.pdf
+        base: 2D_Kinematics/Kinematics
       - name: 2D Kinematics Problem Set 11.1.13
-        base: 2D_Kinematics/KinematicsProblemSet11.1.13.pdf
+        base: 2D_Kinematics/KinematicsProblemSet11.1.13
       - name: 2D Kinematics Problem Set 11.8.13
-        base: 2D_Kinematics/KinematicsProblemSet11.8.13.pdf
+        base: 2D_Kinematics/KinematicsProblemSet11.8.13
       - name: 2D Kinematics Solutions 11.1.13
-        base: 2D_Kinematics/KinematicsSolutions11.1.13.pdf
+        base: 2D_Kinematics/KinematicsSolutions11.1.13
       - name: 2D Kinematics Solutions 11.8.13
-        base: 2D_Kinematics/KinematicsSolutions11.8.13.pdf
+        base: 2D_Kinematics/KinematicsSolutions11.8.13
       - name: 2D Kinematics 10.18.13
-        base: 2D_Kinematics/Kinematics10.18.13.pdf
+        base: 2D_Kinematics/Kinematics10.18.13
       - name: 2D Kinematics Solutions
-        base: 2D_Kinematics/2D_Kinematics_solutions.pdf
+        base: 2D_Kinematics/2D_Kinematics_solutions
       - name: 2D Kinematics Final
-        base: 2D_Kinematics/2D_Kinematics_Final.pdf
+        base: 2D_Kinematics/2D_Kinematics_Final
   - name: Gravity
     contents:
       - name: Gravitation Problem Solutions
-        base: Gravity/gravitationProblemSolutions.pdf
+        base: Gravity/gravitationProblemSolutions
       - name: Gravitation Electrostatics Problem Set (C)
-        base: Gravity/C_GravitationElectrostatics_Problem_Set.pdf
+        base: Gravity/C_GravitationElectrostatics_Problem_Set
       - name: Gravitation Lecture (C)
-        base: Gravity/C_Gravitation_Lecture.pdf
+        base: Gravity/C_Gravitation_Lecture
       - name: Gravitation Solutions (C)
-        base: Gravity/C_Gravitation_Solutions.pdf
+        base: Gravity/C_Gravitation_Solutions
       - name: Gravitation Lecture
-        base: Gravity/Gravitation_Lecture.pdf
+        base: Gravity/Gravitation_Lecture
   - name: Energy
     contents:
       - name: Energy Lecture (C)
-        base: Energy/Energy_Lecture_C.pdf
+        base: Energy/Energy_Lecture_C
       - name: Energy Problem Set
-        base: Energy/Energy_Problem_Set.pdf
+        base: Energy/Energy_Problem_Set
   - name: Momentum
     contents:
       - name: Momentum and Collisions
-        base: Momentum/Momentum_and_Collisions.pdf
+        base: Momentum/Momentum_and_Collisions
   - name: Thermodynamics
     contents:
       - name: Thermodynamics
-        base: Thermodynamics/Thermodynamics.pdf
+        base: Thermodynamics/Thermodynamics
   - name: Magnetism
     contents:
       - name: Magnetism Guest Lecture
-        base: Magnetism/Magnetism_Guest_Lecture.pdf
+        base: Magnetism/Magnetism_Guest_Lecture
   - name: Rotation
     contents:
       - name: Rotation Lecture
-        base: Rotation/Rotation_Lecture.pdf
+        base: Rotation/Rotation_Lecture
       - name: Rotational Kinematics
-        base: Rotation/RotationalKinematics.pdf
+        base: Rotation/RotationalKinematics
       - name: Rotation
-        base: Rotation/Rotation.pdf
+        base: Rotation/Rotation
   - name: Forces
     contents:
       - name: Forces (C)
-        base: Forces/C_Forces.pdf
+        base: Forces/C_Forces
       - name: Forces Problem Solutions (C)
-        base: Forces/C_forces_problem_solutions.pdf
+        base: Forces/C_forces_problem_solutions
       - name: Forces Problem Set (C)
-        base: Forces/C_Forces_Problem_Set.pdf
+        base: Forces/C_Forces_Problem_Set
   - name: Electricity
     contents:
       - name: Electric Potential Lecture
-        base: Electricity/Electric_Potential_Lecture.pdf
+        base: Electricity/Electric_Potential_Lecture
       - name: Circuits Problem Set
-        base: Electricity/Circuits_Problem_Set.pdf
+        base: Electricity/Circuits_Problem_Set
       - name: Circuits Lecture
-        base: Electricity/Circuits_Lecture.pdf
+        base: Electricity/Circuits_Lecture
       - name: Electric Field
-        base: Electricity/Electric_Field.pdf
+        base: Electricity/Electric_Field
       - name: Capacitance
-        base: Electricity/Capacitance.pdf
+        base: Electricity/Capacitance
   - name: Optics
     contents:
       - name: Optics Solutions
-        base: Optics/Optics_Solutions.pdf
+        base: Optics/Optics_Solutions
       - name: Optics Lecture
-        base: Optics/Optics_Lecture.pdf
+        base: Optics/Optics_Lecture
   - name: Vectors
     contents:
       - name: Vectors v2 No Comments
-        base: Vectors/Vectors_v2_no_comments.pdf
+        base: Vectors/Vectors_v2_no_comments
       - name: Vectors Lecture Solutions
-        base: Vectors/Vectors_Lecture_Solutions.pdf
+        base: Vectors/Vectors_Lecture_Solutions
   - name: Oscillations
     contents:
       - name: Simple Harmonic Motion
-        base: Oscillations/SHM.pdf
+        base: Oscillations/SHM
   - name: Math
     contents:
       - name: Taylor Approximations 06/07
-        base: Math/TaylorApproximations_0607.pdf
+        base: Math/TaylorApproximations_0607
       - name: Taylor Approximations 05/06
-        base: Math/TaylorApproximations_0506.pdf
+        base: Math/TaylorApproximations_0506
       - name: Discrete Calculus 07/08
-        base: Math/DiscreteCalculus_0708.pdf
+        base: Math/DiscreteCalculus_0708
