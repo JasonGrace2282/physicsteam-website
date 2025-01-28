@@ -1,6 +1,98 @@
+{{ define "head" }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script>
+    $(function() {
+      $(".folder").on("click", function() {
+        const folderBtn = $(this).data("name");
+        const folderIcon = $(this).find("i");
+        const lectureViewer = $("#lecture-viewer");
+        const folder = lectureViewer.find(`[data-folder-name="${folderBtn}"]`);
+
+        // Close the folder if it's already open
+        if(folderIcon.hasClass("fa-folder-open")) {
+          lectureViewer.addClass("hidden");
+          lectureViewer.children("i").removeData("active");
+          folder.addClass("hidden").children().removeData("active");
+          folderIcon.removeClass("fa-folder-open");
+          return;
+        }
+
+        $("#all-folders .folder i").removeClass("fa-folder-open");
+
+        folderIcon.addClass("fa-folder-open");
+        lectureViewer.removeClass("hidden");
+        folder.removeClass("hidden");
+        let step = isMobile() ? 1 : 3;
+        let children = folder.children();
+        // for some reason using .data doesn't work
+        folder.children().slice(0, step).attr("data-active", true);
+        if(children.length >= step) {
+          $("#right-scroll").attr("data-active", true);
+        }
+      });
+
+      // todo fix
+      $("#left-scroll[data-active]").on("click", function() {
+        const folder = $("#lecture-viewer").find("[data-folder-name]").not(".hidden");
+        const active = folder.children("[data-active]");
+        const step = isMobile() ? 1 : 3;
+        const index = active.first().index();
+        const next = active.slice(index - step, index);
+        active.removeAttr("data-active");
+        next.attr("data-active", true);
+      });
+
+      $("#right-scroll[data-active]").on("click", function() {
+        const folder = $("#lecture-viewer").find("[data-folder-name]").not(".hidden");
+        const active = folder.children("[data-active]");
+        const step = isMobile() ? 1 : 3;
+        const index = active.last().index();
+        const next = active.slice(index + 1, index + 1 + step);
+        active.removeAttr("data-active");
+        next.attr("data-active", true);
+      });
+    })
+  </script>
+{{ end }}
+
+
 {{ define "main" }}
   <div class="flex flex-col text-center bg-linear-to-br from-blue-500 via-teal-400 to-teal-500 w-screen min-h-screen">
     {{ partial "nav" (dict "context" . "sticky" true) }}
 
+    {{ with (index .Site.Data.teams .Page.Params.data) }}
+      <h1 class="text-3xl md:text-5xl font-nunito font-medium text-white mt-3">Lectures</h1>
+      <div class="mx-auto md:w-3/4 pt-3 flex flex-wrap justify-center items-center" id="all-folders">
+        {{ range .folders }}
+          <div class="folder px-3 py-2 my-1 mx-5 bg-white flex justify-center items-center rounded-lg hover:cursor-pointer"
+            data-name="{{ .name }}">
+            <i class="fas fa-folder text-blue-500 pr-1"></i>
+            <p class="text-blue-500 hover:text-purple-900 text-sm">{{ .name }}</p>
+          </div>
+        {{ end }}
+      </div>
+      <div id="lecture-viewer" class="mx-auto md:w-4/5 bg-white/50 rounded-lg flex justify-evenly items-center mt-10 hidden">
+        <i class="far fa-chevron-left pl-7 data-active:hover:cursor-pointer not-data-active:opacity-50" id="left-scroll"></i>
+        <div class="w-full flex justify-center items-center">
+          {{ range .folders }}
+            <div data-folder-name="{{ .name }}" class="grid grid-cols-1 md:grid-cols-3 gap-x-20 hidden">
+              {{ range .contents }}
+                {{ $base :=  printf "img/teams/%s/%s" $.Page.Params.teamFolder .base }}
+                <a href='{{ printf "%s.pdf" $base | relURL }}' class="flex flex-col my-10 not-data-active:hidden">
+                  <div class="flex justify-center items-center bg-white py-2 rounded-lg">
+                    <img src='{{ printf "%s.png" $base | relURL }}' class="w-64 h-64 overflow-hidden">
+                  </div>
+                  <p class="text-blue-500 pt-3">{{ .name }}</p>
+                </a>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+        <i class="far fa-chevron-right pr-7 data-active:hover:cursor-pointer not-data-active:opacity-50" id="right-scroll"></i>
+      </div>
+    {{ end }}
   </div>
 {{ end }}
